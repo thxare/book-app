@@ -22,6 +22,7 @@ export const BooksAvailable = ({ setAddBook }) => {
             {library.map((book) => {
               return (
                 <ul className={styles.eachBook} key={book.book.ISBN}>
+                  <span className={styles.span}>+</span>
                   <button
                     className={styles.buttonAdd}
                     onClick={(e) => onClick(e, book.book)}
