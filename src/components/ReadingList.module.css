@@ -11,10 +11,16 @@
   flex-direction: column;
   align-items: center;
   font-weight: 400;
+  text-decoration: underline;
 }
 
 .bookList {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   flex-wrap: wrap;
+  list-style: none;
+  row-gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0px 20px;
 }

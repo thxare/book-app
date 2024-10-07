@@ -8,7 +8,7 @@ export const BooksApp = () => {
   useEffect(() => {}, [addBook]);
   return (
     <div className={styles.booksContainer}>
-      <BooksAvailable setAddBook={setAddBook} />
+      <BooksAvailable addBook={addBook} setAddBook={setAddBook} />
       <ReadingList addBook={addBook} />
     </div>
   );

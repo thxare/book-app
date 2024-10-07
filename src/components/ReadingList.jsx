@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ReadingList.module.css";
 
 export const ReadingList = ({ addBook }) => {
@@ -6,15 +6,16 @@ export const ReadingList = ({ addBook }) => {
     <div className={styles.content}>
       <h2 className={styles.title}>Lista de lectura</h2>
       <div className={styles.books}>
-        <li className={styles.bookList}>
+        <ul className={styles.bookList}>
+          {addBook.length < 1 ? <div>No hay libros en la lista...</div> : ""}
           {addBook.map((book) => {
             return (
-              <ul>
+              <li key={book.ISBN}>
                 <img alt="libros" src={book.cover} width={180} />
-              </ul>
+              </li>
             );
           })}
-        </li>
+        </ul>
       </div>
     </div>
   );
